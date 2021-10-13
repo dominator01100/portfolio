@@ -1,0 +1,126 @@
+:root {
+    --fuentePrimaria: 'aldosemibold', sans-serif;
+    --fuenteSecundaria: 'allerregular';
+    --colorAzulOscuro: #233d58;
+    --colorAzulClaro: #29abe2;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: var(--fuentePrimaria);
+    background: purple;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    height: 3.5rem;
+    background: var(--colorAzulOscuro);
+    position: relative;
+}
+
+header h1 {
+    display: none;
+}
+
+header nav {
+    display: none;
+}
+
+header #prev_section,
+header #next_section {
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    /* overflow: hidden; */
+    margin: 0.5rem;
+    position: absolute;
+    top: 0rem;
+}
+
+header #prev_section {
+    right: 3.5rem;
+}
+
+header #next_section {
+    right: 0.5rem;
+}
+
+header #prev_section i,
+header #next_section i {
+    display: block;
+    color: white;
+    width: 100%;
+    position: relative;
+    top: 0rem;
+    left: 0.3rem;
+}
+
+@media (min-width: 480px) {
+    body {
+        background: red;
+    }
+}
+
+@media (min-width: 600px) {
+    body {
+        background: orange;
+    }
+}
+
+@media (min-width: 767px) {
+    body {
+        background: yellow;
+    }
+
+    header {
+      height: 5rem;
+    }
+
+    header h1 {
+      display: inline-block;
+      width: 20%;
+      background: red;
+      margin: 0rem;
+      height: 5rem;
+      margin-left: 8rem;
+      line-height: 5rem;
+      min-width: 20rem;
+    }
+
+    header #prev_section,
+    header #next_section {
+        position: absolute;
+        width: 5rem;
+        height: 5rem;
+        background: var(--colorAzulClaro);
+        right: 4rem;
+        z-index: 999;
+        border-radius: 50%;
+    }
+
+    header #prev_section i,
+    header #next_section i {
+        font-size: 4rem;
+        text-align: center;
+        top: 0.5rem;
+    }
+
+    header #prev_section {
+        top: 11.5rem;
+    }
+
+    header #next_section {
+        top: 19rem;
+    }
+}
+
+@media (min-width: 950px) {
+    body {
+        background: green;
+    }
+}
