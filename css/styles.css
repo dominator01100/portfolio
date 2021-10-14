@@ -1,3 +1,4 @@
+/* VARIABLES */
 :root {
     --fuentePrimaria: 'aldosemibold', sans-serif;
     --fuenteSecundaria: 'allerregular';
@@ -16,6 +17,7 @@ body {
     position: relative;
 }
 
+/* HEADER */
 header {
     width: 100%;
     height: 3.5rem;
@@ -117,6 +119,151 @@ header #next_section i {
     left: 0.3rem;
 }
 
+/* SLIDER */
+#slider {
+    width: 100%;
+    position: relative;
+    height: 60rem;
+    background: black;
+}
+
+#slider section.slide {
+    position: absolute;
+    width: 100%;
+    top: 0rem;
+    left: 0rem;
+}
+
+#slider #home {
+    height: 50rem;
+    background: green;
+}
+
+#slider #aboutme {
+    height: 40rem;
+    background: yellow;
+}
+
+#slider #skills {
+    height: 30rem;
+    background: red;
+}
+
+#slider #portfolio {
+    height: 20rem;
+    background: blue;
+}
+
+#slider #blog {
+    height: 10rem;
+    background: purple;
+}
+
+/*CONTACTO*/
+#contact_form {
+    position: absolute;
+    right: 0rem;
+    top: 3.5rem;
+    background: white;
+    width: 25rem;
+    border-top: 0.1rem solid black;
+    box-shadow: 0rem 0rem 0.3rem #9f9e9e;
+    font-family: var(--fuenteSecundaria);
+    height: 100vh;
+    z-index: 999;
+    display: none;
+}
+
+#contact_form #close_form {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    left: 85%;
+    top: 19rem;
+}
+
+#contact_form #close_form:hover {
+    cursor: pointer;
+}
+
+#contact_form #close_form:before {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f00d";
+    font-weight: 900;
+    font-size: 2.8rem;
+    position: relative;
+    top: 0.05rem;
+    left: 0.6rem;
+}
+
+#contact_form figure {
+    height: 18rem;
+    width: 100%;
+    margin: 0rem;
+    padding: 0rem;
+    text-align: center;
+    background: var(--colorAzulClaro);
+}
+
+#contact_form figure img {
+    height: 100%;
+    margin: 0rem;
+}
+
+#contact_form p {
+    margin: 2rem;
+    width: 90%;
+    margin-left: 5%;
+}
+
+#contact_form input,
+#contact_form textarea {
+    display: block;
+    margin: 2rem;
+    border: none;
+    border-bottom: 0.2rem solid gray;
+    width: 90%;
+    margin-left: 5%;
+    padding-bottom: 0.3rem;
+    margin-bottom: 5rem;
+    font-weight: bold;
+}
+
+#contact_form #button {
+    background: #f8911f;
+    color: white;
+    border: none;
+    padding: 0.8rem 0rem;
+    border-radius: 0.5rem;
+}
+
+#contact_button {
+    width: 6rem;
+    height: 6rem;
+    background: #f8931f;
+    border-radius: 50%;
+    color: white;
+    z-index: 80;
+    right: 1rem;
+    position: fixed;
+    top: 80vh;
+}
+
+#contact_button:hover {
+    cursor: pointer;
+}
+
+#contact_button:before {
+  font-family: 'Font Awesome 5 Free';
+  content: "\f1d8";
+  font-weight: 900;
+  position: relative;
+  font-size: 2.1em;
+  right: -0.8rem;
+  top: 0.5rem;
+}
+
+/* MEDIA QUERIES */
 @media (min-width: 480px) {
     body {
         background: red;
@@ -236,6 +383,15 @@ header #next_section i {
 
     header #next_section {
         top: 19rem;
+    }
+
+    #contact_form {
+      top: 5rem;
+      width: 40rem;
+    }
+
+    #contact_button {
+      right: 3.5rem;
     }
 }
 
