@@ -13,7 +13,6 @@ html {
 body {
     font-size: 1.6rem;
     font-family: var(--fuentePrimaria);
-    background: purple;
     position: relative;
 }
 
@@ -23,6 +22,7 @@ header {
     height: 3.5rem;
     background: var(--colorAzulOscuro);
     position: relative;
+    z-index: 999;
 }
 
 header h1 {
@@ -124,19 +124,96 @@ header #next_section i {
     width: 100%;
     position: relative;
     height: 60rem;
-    background: black;
 }
 
 #slider section.slide {
     position: absolute;
     width: 100%;
-    top: 0rem;
+    top: -2rem;
     left: 0rem;
 }
 
+/* HOME */
 #slider #home {
-    height: 50rem;
-    background: green;
+    background: var(--colorAzulOscuro);
+    font-family: var(--fuenteSecundaria);
+    position: relative;
+    text-align: center;
+    padding-bottom: 7rem;
+}
+
+#slider #home .mainanimation {
+    width: 80%;
+    margin-left: 10%;
+    min-height: 30rem;
+    position: absolute;
+}
+
+canvas {
+    display: block;
+    vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: none;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+#slider #home .mainlogo {
+    background: none;
+    position: relative;
+    width: 60vw;
+    margin-left: 20vw;
+    min-height: 43rem;
+}
+
+#slider #home .mainlogo h2 {
+    font-size: 1.2em;
+    padding-top: 8rem;
+    color: white;
+    font-weight: lighter;
+}
+
+#slider #home .mainlogo strong {
+    font-size: 2em;
+    font-family: var(--fuentePrimaria);
+    display: block;
+}
+
+#slider #home .mainlogo figure,
+#slider #home .mainlogo figure img {
+    width: 100%;
+    margin: 0rem;
+}
+
+#slider #home .buttonspage {
+    width: 100%;
+    text-align: center;
+}
+
+#slider #home .buttonspage>* {
+    display: inline-block;
+    width: 40%;
+    margin: 0.5rem 2.5%;
+    color: white;
+    padding: 1.5rem 2.5%;
+}
+
+#slider #home #contratame {
+    cursor: pointer;
+    background: #f8931f;
+}
+
+#slider #home a {
+    text-decoration: none;
+    background: var(--colorAzulClaro);
 }
 
 #slider #aboutme {
@@ -254,19 +331,110 @@ header #next_section i {
 }
 
 #contact_button:before {
-  font-family: 'Font Awesome 5 Free';
-  content: "\f1d8";
-  font-weight: 900;
-  position: relative;
-  font-size: 2.1em;
-  right: -0.8rem;
-  top: 0.5rem;
+    font-family: 'Font Awesome 5 Free';
+    content: "\f1d8";
+    font-weight: 900;
+    position: relative;
+    font-size: 2.1em;
+    right: -0.8rem;
+    top: 0.5rem;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    background: black;
+    color: white;
+    text-align: center;
+    z-index: 90;
+    height: 15rem;
+    position: fixed;
+    bottom: -13rem;
+    transition-duration: 0.4s;
+}
+
+footer:hover {
+    bottom: 0rem;
+}
+
+footer:after {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f107";
+    font-weight: 900;
+    position: absolute;
+    top: 0rem;
+    left: 50%;
+    width: 8rem;
+    height: 8rem;
+    margin-left: -4rem;
+    margin-top: -3rem;
+    border-radius: 50%;
+    background: black;
+    color: black;
+    transform: rotate(180deg);
+    font-size: 5em;
+    transition-duration: 0.4s;
+    text-shadow: 0rem 1.5rem 0rem white;
+}
+
+footer:hover:after {
+    transform: rotate(0deg);
+    background: white;
+    color: black;
+    text-shadow: 0rem 0rem 0rem black;
+}
+
+footer .rrss {
+    margin-top: 7rem;
+    width: 100%;
+    height: 4rem;
+}
+
+footer .rrss a {
+    width: 4rem;
+    height: 4rem;
+    display: inline-block;
+    position: relative;
+}
+
+footer .rrss a i {
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    font-size: 2em;
+    top: 0.5rem;
+    left: 0.5rem;
+}
+
+/* footer .rrss a i {
+  color: white;
+} */
+footer p {
+    font-size: 0.7em;
+    font-weight: lighter;
+    font-family: var(--fuenteSecundaria);
 }
 
 /* MEDIA QUERIES */
 @media (min-width: 480px) {
-    body {
-        background: red;
+    #slider #home .mainlogo {
+        width: 27rem;
+        left: 50%;
+        margin-left: -13.5rem;
+        padding-bottom: 5rem;
+    }
+
+    #slider #home .mainlogo h2 {
+        font-size: 1.4em;
+    }
+
+    #slider #home .mainlogo figure {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    #slider #home .buttonspage>* {
+        width: 20rem;
     }
 }
 
@@ -386,12 +554,12 @@ header #next_section i {
     }
 
     #contact_form {
-      top: 5rem;
-      width: 40rem;
+        top: 5rem;
+        width: 40rem;
     }
 
     #contact_button {
-      right: 3.5rem;
+        right: 3.5rem;
     }
 }
 

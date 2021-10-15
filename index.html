@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="Ingeniería de Sistemas, programación">
+    <meta name="description" content="Desarrollo web con buen estilo">
+    <meta name="author" content="Andres Sanchez">
+    <meta name="owner" content="Andres Sanchez">
+    <meta name="robots" content="index, follow">
     <title>Andres Sanchez</title>
     <script src="js/modernizr-custom.js" charset="utf-8"></script>
     <link rel="stylesheet" href="css/normalize.css">
@@ -58,7 +63,25 @@
     </header>
 
     <div id="slider">
-        <section class="slide" id="home" style="display: block"></section>
+        <section class="slide" id="home" style="display: block">
+            <div class="mainanimation">
+                <div id="particles-js"></div>
+            </div>
+
+            <div class="mainlogo">
+                <h2>Soy un <strong>Ingeniero de Sistemas</strong></h2>
+
+                <figure>
+                    <img src="img/logo.png" alt="">
+                </figure>
+            </div>
+
+            <div class="buttonspage">
+                <div id="contratame" onclick="displayFormContact('block')">CONTRÁTAME</div>
+                <a href="docs/cv_test.txt" target="_blank">DESCARGAR CV</a>
+            </div>
+        </section>
+
         <section class="slide" id="aboutme" style="display: none"></section>
         <section class="slide" id="skills" style="display: none"></section>
         <section class="slide" id="portfolio" style="display: none"></section>
@@ -66,22 +89,35 @@
     </div>
 
     <div id="contact_form">
-      <form action="contact.php" id="form1" name="form1" method="post">
-        <div id="close_form" onclick="displayFormContact('none')"></div>
-        <figure id="logo_mensaje">
-          <img src="img/mail.png" alt="">
-        </figure>
-        <p>Dí Hola</p>
+        <form action="contact.php" id="form1" name="form1" method="post">
+            <div id="close_form" onclick="displayFormContact('none')"></div>
+            <figure id="logo_mensaje">
+                <img src="img/mail.png" alt="">
+            </figure>
+            <p>Dí Hola</p>
 
-        <input type="text" name="name" id="name" placeholder="Tu nombre">
-        <input type="email" name="email" id="email" placeholder="Tu email">
-        <textarea name="message" id="message" placeholder="Mensaje"></textarea>
-        <input type="submit" name="Submit" id="button" value="ENVIAR">
-      </form>
+            <input type="text" name="name" id="name" placeholder="Tu nombre">
+            <input type="email" name="email" id="email" placeholder="Tu email">
+            <textarea name="message" id="message" placeholder="Mensaje"></textarea>
+            <input type="submit" name="Submit" id="button" value="ENVIAR">
+        </form>
     </div>
 
     <div id="contact_button" onclick="displayFormContact('block')"></div>
 
+    <footer>
+        <div class="rrss">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <p>© 2021 All rights reserved | Privacity Policy</p>
+    </footer>
+
+    <script src="js/particles.js" charset="utf-8"></script>
+    <script src="js/app.js" charset="utf-8"></script>
     <script type="text/javascript">
         var sections = new Array(5);
         sections[0] = "home";
@@ -195,9 +231,9 @@
         }
 
         function displayFormContact(status) {
-          var form = document.getElementById('contact_form');
+            var form = document.getElementById('contact_form');
 
-          form.style.display = status;
+            form.style.display = status;
         }
     </script>
 </body>
